@@ -55,8 +55,10 @@ app.models.user.afterRemote("create", (ctx, user, next) => {
   app.models.Profile.create(
     {
       first_name: user.username,
+      name: user.name,
       created_at: new Date(),
-      userId: user.id
+      userId: user.id,
+      role: "subscriber"
     },
     (err, result) => {
       if (!err && result) {

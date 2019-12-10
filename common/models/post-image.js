@@ -43,7 +43,7 @@ module.exports = function(PostImage) {
           sharp(
             "./server/storage/" + ctx.req.params.container + "/" + fileInfo.name
           )
-            .resize(100)
+            .resize(200, 200)
             .toFile(
               "./server/storage/" +
                 ctx.req.params.container +

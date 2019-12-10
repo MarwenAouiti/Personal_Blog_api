@@ -22,9 +22,7 @@
       "type": "number"
     },
     "history": {
-      "type": [
-        "object"
-      ]
+      "type": ["object"]
     }
   },
   "validations": [],
@@ -37,6 +35,11 @@
     "Post": {
       "type": "hasMany",
       "model": "Post",
+      "foreignKey": ""
+    },
+    "Comment": {
+      "type": "hasMany",
+      "model": "Comment",
       "foreignKey": ""
     }
   },
